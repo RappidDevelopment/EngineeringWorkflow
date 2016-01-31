@@ -10,7 +10,8 @@ We have deeply integrated these tools togther to bring all parts into one stream
 This document outlines that process and can act as a reference for all team members.
 
 ## Table of Contents
-* Developers - [Working a Ticket](#working-a-ticket)
+* Developers - 
+	* [Working a Ticket](#working-a-ticket)
 	* [The Backlog & Failed Columns](#backlog)
 	* [Branching Scheme](#branching-scheme)
 		* [Stories](#story)
@@ -18,13 +19,20 @@ This document outlines that process and can act as a reference for all team memb
 		* [Technical Stories](#tech-story)
 	* [Automatic Transitions](#auto-transitions)
 	* [Commit Conventions](#commit-conventions)
-		* Comment 
-		* Log Time
-		* Close subtask
-* Link 2
-* Link 3
-* LInk 4
-* LInk 5
+		* [Comment](#comment)
+		* [Log Time](#log-time)
+		* [Mark Subtask Done](#transition)
+* ~~Testers~~ (Coming Soon)
+	* ~~Testing a story~~~
+	* ~~Writing a story defect~~
+	* ~~Writing test cases~~
+* ~~Product Owners~~ (Coming Soon)
+	* ~~Creating a ticket~~
+	* ~~Creating acceptance critera~~
+* ~~C.I Information~~ (Coming Soon)
+	* ~~Builds~~  
+	* ~~Environments~~
+	* ~~Deploying a build~~
 
 ## <a name="working-a-ticket"></a>Working a Ticket
 Our Kanban board
@@ -32,9 +40,9 @@ Our Kanban board
 Regardless if the project is using Scrum or Kanban, the board is where all work for the project is visualized. Tickets are never really assigned to anyone; the  team of developers pick them up as the project advances. 
 
 ### <a name="backlog"></a>The Backlog & Failed Columns
-The *backlog column* is home to tickets ready to be worked, but that have not been started yet. These tickets contain a 'definition of ready' and have the business requirements, acceptance criteria and implementation details outlined and understood.  
+The *backlog column* is home to tickets ready to be worked, but that have not been started yet. These tickets contain a *definition of ready* and have the business requirements, acceptance criteria and implementation details outlined and understood.  
 
-The *failed column* is home to tickets that have been implemented, but haven not passed code review, testing or acceptance from a product owner.
+The *failed column* is home to tickets that have been implemented, but haven not passed code review, testing or acceptance from a product owner. There shoud be an explaination as to why the ticket failed.
 
 To start developing, select a ticket from either column.
 
@@ -48,7 +56,7 @@ There are three types of tickets that can land in the backlog:
 We normally follow a feature branching pattern. There are two main branches:  
 * Master - current production code  
 * Develop - code for next production release  
-Every ticket in [the backlog](#backlog) gets it's own branch. Create one for the ticket you are working and follow this convention.  
+**Every ticket in [the backlog](#backlog) gets it's own branch.** Create a branch for the ticket you are working on and follow this convention.  
 #### <a name="story"></a>1. Story branching convention
 ```  
 feature/<ticket-number>
@@ -80,21 +88,21 @@ Creating a pull-request for the branch will move the ticket to *code review*. Th
 ## <a name="commit-conventions"></a>Commit Conventions
 JIRA supports **smart commits**. Smart commits allow you to log time, comment and transition a ticket.  
 The general rule of thumb at Rappid Development is **branch for tickets, commit against subtasks**.  Commit messages should follow this standard.
-### <a name="log-time"></a>Log Time
+#### <a name="log-time"></a>Log Time
 ```
 <subtask-number> #time 1h 30m
 ```  
 ```
 WR-113 #time 1h 30m  
 ```  
-### <a name="comment"></a>Comment
+#### <a name="comment"></a>Comment
 ```
 <subtask-number> #comment Updating README.md. Changes ready for review. #time 1h 30m
 ```  
 ```
 WR-113 #comment Updating README.md. Changes ready for review. #time 1h 30m  
 ```  
-### <a name="transition"></a>Mark Subtask Done
+#### <a name="transition"></a>Mark Subtask Done
 ```
 <subtask-number> #done #comment Updating README.md. Changes ready for review. #time 1h 30m
 ```  
