@@ -79,8 +79,28 @@ This automatically transitions the ticket from the *backlog* or *failed* columns
 Creating a pull-request for the branch will move the ticket to *code review*. The pull-request being merged will move the ticket to *testing* and the pull-request being closed will move the ticket to *failed*.
 ## <a name="commit-conventions"></a>Commit Conventions
 JIRA supports **smart commits**. Smart commits allow you to log time, comment and transition a ticket.  
-The general rule of thumb at Rappid Development is **branch for tickets, commit against subtasks**.  
-
+The general rule of thumb at Rappid Development is **branch for tickets, commit against subtasks**.  Commit messages should follow this standard.
+### <a name="log-time"></a>Log Time
+```
+<subtask-number> #time 1h 30m
+```  
+```
+WR-113 #time 1h 30m  
+```  
+### <a name="comment"></a>Comment
+```
+<subtask-number> #comment Updating README.md. Changes ready for review. #time 1h 30m
+```  
+```
+WR-113 #comment Updating README.md. Changes ready for review. #time 1h 30m  
+```  
+### <a name="transition"></a>Mark Subtask Done
+```
+<subtask-number> #done #comment Updating README.md. Changes ready for review. #time 1h 30m
+```  
+```
+WR-113 #done #comment Updating README.md. Changes ready for review. #time 1h 30m  
+```  
 
 
 
