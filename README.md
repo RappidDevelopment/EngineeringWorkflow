@@ -57,6 +57,7 @@ We normally follow a feature branching pattern. There are two main branches:
 * Master - current production code  
 * Develop - code for next production release  
 **Every ticket in [the backlog](#backlog) gets it's own branch.** Create a branch for the ticket you are working on and follow this convention.  
+
 #### <a name="story"></a>1. Story branching convention
 ```  
 feature/<ticket-number>
