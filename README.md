@@ -53,6 +53,7 @@ There are three types of tickets that can land in the backlog:
 
 ### <a name="branching-scheme"></a>Branching Scheme 
 ![git-flow](https://raw.githubusercontent.com/RappidDevelopment/EngineeringWorkflow/d6405089483de476348fae8fb66377c73d95d08c/Screenshots/gitflow-diagram.png)
+
 We normally follow a feature branching pattern. There are two main branches:  
 * Master - current production code  
 * Develop - code for next production release  
